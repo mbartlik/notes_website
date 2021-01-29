@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h4>{% block title %} {{ note[1] }} {% endblock %}</h4>
+
+	<p>{{ note[2] }}</p>
+
+	<a style="text-decoration: none" href="{{ url_for('edit_note', token=token, note_id=note[0]) }}">Edit Note</a>
+
+
+{% endblock %}

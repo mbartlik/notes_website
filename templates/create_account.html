@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+	<h4>{% block title %}Create Account{% endblock %}</h4>
+
+	<form method="post">
+		<div><input name="username" placeholder="Username"></input></div>
+		<div style="padding-top: 5px"><input type="password" name="password" placeholder="Password"></input></div>
+		<div style="padding-top: 5px"><input type="password" name="confirm_password" placeholder="Confirm Password"></input></div>
+		<button style="padding-top: 5px" type="submit">Submit</button>
+	</form>
+
+	<hr>
+
+
+{% endblock %}

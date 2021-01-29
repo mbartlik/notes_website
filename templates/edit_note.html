@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h4>{% block title %} Edit Note {% endblock %}</h4>
+
+	<form method="post">
+		<div><input name="note_title" value="{{ note[1] }}"></div>
+		<hr>
+		<div><textarea style="width: 300px; height: 150px" name="note_content">{{ note[2] }}</textarea></div>
+		<div>
+			<button type="submit">Submit</button>
+			<a href="{{ url_for('show_note', token=token, note_id=note[0]) }}">Cancel</a>
+		</div>
+	</form>
+
+{% endblock %}

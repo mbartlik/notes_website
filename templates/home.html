@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h4>{% block title %}Home <a style="text-decoration: none; padding-left: 25px; color: blue" href="{{ url_for('new_note', token=token) }}">New Note</a> {% endblock %}</h4>
+
+	{% for note in notes %}
+		<a style="text-decoration: none; color: blue" href="{{ url_for('show_note', note_id=note[0], token=token) }}">{{ note[1] }}</a>
+		<hr>
+	{% endfor %}
+
+{% endblock %}

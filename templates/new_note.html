@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h4>{% block title %}New Note{% endblock %}</h4>
+
+	<form method="post">
+		<div><input name="note_title" placeholder="Note Title"></div>
+		<hr>
+		<div><textarea style="width: 300px; height: 150px" name="note_content"></textarea></div>
+		<div><button type="submit">Submit</button></div>
+	</form>
+
+{% endblock %}
